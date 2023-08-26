@@ -1,0 +1,208 @@
+
+html {
+    font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    scroll-behavior: smooth;
+    height : 1800px;
+}
+
+body {
+    margin : 0;
+    background-color : black;
+    height: 1800px;
+}
+nav {
+    display : flex;
+    position : fixed;
+    flex-direction : row;
+    justify-content: space-around;
+    align-items : center;
+    width : 100%;
+    height: 50px ;
+    background-color: red
+}
+
+a {
+    text-decoration : none;
+   
+}
+
+main {
+    display : grid;
+    grid-template-columns : [c1] 5% [c2] 30% [c3] 15% [c4] 15% [c5] 30% [c6] 5%;
+    grid-template-rows: [r1] 5% [r2] 30% [r3] 20% [r4] 20% [r5] 20% [r6] 20% [r7] 5%;
+    background-color : blue;
+    border : 20px solid blue;
+    max-width : 1000px;
+    height : 1500px;
+    margin-left : auto;
+    margin-right : auto; 
+}
+#about {
+    grid-column-start: c2;
+    grid-column-end: c;
+    grid-row-start: r2;
+    grid-row-end: r3;
+}
+
+h1 {
+    grid-column-start: c2;
+    grid-column-end: c4;
+    color : red;
+    padding: 30px
+}
+
+h3 {
+    color : lightblue;
+}
+
+#services {
+    grid-column-start: c2;
+    grid-column-end: c4;
+    grid-row-start: r3;
+    grid-row-end: r4;   
+}
+
+#profile-photo {
+    grid-column-start: c4;
+    grid-column-end: c6;
+    grid-row-start: r2;
+    grid-row-end: r3;
+    border-radius : 30%;
+    width : 300px;
+    height : auto;
+    border : 20px solid orange;
+    padding : 20px; 
+    margin: 50px;
+}
+
+#profile-photo:hover {
+    width: 500px;
+    grid-column-start: c3;
+    grid-column-end: c6;
+    grid-row-start: r2;
+    grid-row-end: r3;
+
+}
+
+#contact {
+    grid-column-start: c4;
+    grid-column-end: c6;
+    grid-row-start: r3;
+    grid-row-end: r4;
+
+}
+
+#phone {
+    color : indigo;
+}
+
+h1:hover {
+    font-size : 50pt;
+}
+
+
+.galleryphoto {
+    width : 250px;
+    height : auto;
+}
+
+#galleryphoto1 {
+    grid-column-start: c2;
+    grid-column-end: c3;
+    grid-row-start: r4;
+    grid-row-end: r5;
+}
+#galleryphoto2 {
+    grid-column-start: c2;
+    grid-column-end: c3;
+    grid-row-start: r5;
+    grid-row-end: r6;
+}
+#galleryphoto3 {
+    grid-column-start: c2;
+    grid-column-end: c3;
+    grid-row-start: r6;
+    grid-row-end: r7;
+}
+#galleryphoto4 {
+    grid-column-start: c3;
+    grid-column-end: c4;
+    grid-row-start: r4;
+    grid-row-end: r5;
+}
+#galleryphoto5 {
+    grid-column-start: c3;
+    grid-column-end: c4;
+    grid-row-start: r5;
+    grid-row-end: r6;
+}
+#galleryphoto6 {
+    grid-column-start: c3;
+    grid-column-end: c4;
+    grid-row-start: r6;
+    grid-row-end: r7;
+}
+#galleryphoto7 {
+    grid-column-start: c5;
+    grid-column-end: c6;
+    grid-row-start: r4;
+    grid-row-end: r5;
+}
+#galleryphoto8 {
+    grid-column-start: c5;
+    grid-column-end: c6;
+    grid-row-start: r5;
+    grid-row-end: r6;
+}
+#galleryphoto9 {
+    grid-column-start: c5;
+    grid-column-end: c6;
+    grid-row-start: r6;
+    grid-row-end: r7;
+}
+
+#gallery {
+    grid-column-start: c7;
+    grid-column-end: c8;
+    grid-row-start: r6;
+    grid-row-end: r7;
+}
+
+#footer {
+    grid-column-start: c7;
+    grid-column-end: c8;
+    grid-row-start: r6;
+    grid-row-end: r7;
+    margin : none;
+    display : flex;
+    list-style-type : none;
+    flex-direction : row;
+    justify-content: space-around;
+    align-items : center;
+    height: 30px ;
+    background-color: red;
+    text-decoration: none;
+    padding : 0;
+    margin : 0;
+}
+
+@media (max-width: 520px) {
+
+    body {
+        font-Size : 10px;
+        width : auto;   
+    }
+
+    main {
+        background : pink;
+        display : grid;
+        grid-template-columns : 100%;
+        grid-template-rows : auto;
+        justify-items: center;
+    }
+
+    #profile-photo {
+        width : 100px;
+        height: auto;
+    }
+}
