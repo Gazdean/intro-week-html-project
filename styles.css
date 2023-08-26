@@ -1,14 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 
 html {
     font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     scroll-behavior: smooth;
-    height : 1800px;
 }
 
 body {
-    margin : 0;
     background-color : black;
-    height: 1800px;
+    margin: 0;
+    padding:0;
+    border:0;
 }
 nav {
     display : flex;
@@ -22,31 +28,32 @@ nav {
 }
 
 a {
-    text-decoration : none;
-   
+    text-decoration : none; 
 }
 
 main {
     display : grid;
     grid-template-columns : [c1] 5% [c2] 30% [c3] 15% [c4] 15% [c5] 30% [c6] 5%;
-    grid-template-rows: [r1] 5% [r2] 30% [r3] 20% [r4] 20% [r5] 20% [r6] 20% [r7] 5%;
+    grid-template-rows: [r1] 4% [r2] 29% [r3] 16% [r4] 16% [r5] 16% [r6] 16%; 
     background-color : blue;
-    border : 20px solid blue;
     max-width : 1000px;
-    height : 1500px;
+    height : 1800px;
     margin-left : auto;
-    margin-right : auto; 
+    margin-right : auto;
+    margin-bottom : 0;
+    padding: 0;
+    border: 0;
+   
+    
 }
 #about {
     grid-column-start: c2;
-    grid-column-end: c;
+    grid-column-end: c4;
     grid-row-start: r2;
     grid-row-end: r3;
 }
 
 h1 {
-    grid-column-start: c2;
-    grid-column-end: c4;
     color : red;
     padding: 30px
 }
@@ -68,15 +75,17 @@ h3 {
     grid-row-start: r2;
     grid-row-end: r3;
     border-radius : 30%;
-    width : 300px;
+    width : 60%;
     height : auto;
     border : 20px solid orange;
     padding : 20px; 
-    margin: 50px;
+    margin-right: 30px;
+    margin-left : 30px;
+    margin-top : 20px;
 }
 
 #profile-photo:hover {
-    width: 500px;
+    width: 85%;
     grid-column-start: c3;
     grid-column-end: c6;
     grid-row-start: r2;
@@ -102,8 +111,9 @@ h1:hover {
 
 
 .galleryphoto {
-    width : 250px;
+    width : 80%;
     height : auto;
+    margin : auto;
 }
 
 #galleryphoto1 {
@@ -126,19 +136,19 @@ h1:hover {
 }
 #galleryphoto4 {
     grid-column-start: c3;
-    grid-column-end: c4;
+    grid-column-end: c5;
     grid-row-start: r4;
     grid-row-end: r5;
 }
 #galleryphoto5 {
     grid-column-start: c3;
-    grid-column-end: c4;
+    grid-column-end: c5;
     grid-row-start: r5;
     grid-row-end: r6;
 }
 #galleryphoto6 {
     grid-column-start: c3;
-    grid-column-end: c4;
+    grid-column-end: c5;
     grid-row-start: r6;
     grid-row-end: r7;
 }
@@ -169,40 +179,78 @@ h1:hover {
 }
 
 #footer {
+    display : flex;
     grid-column-start: c7;
     grid-column-end: c8;
     grid-row-start: r6;
     grid-row-end: r7;
     margin : none;
-    display : flex;
+    position : sticky;
     list-style-type : none;
-    flex-direction : row;
     justify-content: space-around;
     align-items : center;
+    width : 100%;
     height: 30px ;
     background-color: red;
     text-decoration: none;
     padding : 0;
-    margin : 0;
+    border : 0;
+   
 }
+
 
 @media (max-width: 520px) {
 
+/*/
+    * {
+        margin : 0;
+        padding : 0;
+        border : 0;
+    }
+
+
+    html {
+        height : auto;
+        width : 520px;
+        margin : 0;
+        padding : 0;
+        border : 0;
+    }
+
+    nav {
+        font-size : 10px;
+    }
+
     body {
-        font-Size : 10px;
-        width : auto;   
+        
+        width : 520px;
+        font-Size : 20px;
+        margin : 0;
+        padding : 0;
+        border : 0;
+        
     }
 
-    main {
+    main {    
         background : pink;
-        display : grid;
-        grid-template-columns : 100%;
-        grid-template-rows : auto;
-        justify-items: center;
+        width : 520px;
+        padding : 0;
+        border : 0;
+        
+    }
+/*/
+    #profile-photo {
+        width : 80%;
+        height: auto;
+        margin : none;
+        border : none;
+        padding: none;
     }
 
-    #profile-photo {
-        width : 100px;
-        height: auto;
-    }
+    #profile-photo:hover {
+        width: 100%;
+        grid-column-start: c2;
+        
+
 }
+/*/
